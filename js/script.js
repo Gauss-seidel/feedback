@@ -1,5 +1,5 @@
 // Cambiá esta URL por la que te dio Google Apps Script
-const scriptURL = "PEGAR_AQUI_LA_URL_DEL_APP_SCRIPT";
+const scriptURL = "https://script.google.com/macros/s/AKfycbwa1Y_OfH_GVzKGZprsZpL1vIr8w6sZ-bu1RqX88A9KjBki2Q_tvRy3oUNcEhUay8-z/exec";
 
 document.getElementById("feedbackForm").addEventListener("submit", e => {
   e.preventDefault();
