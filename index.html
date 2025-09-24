@@ -7,12 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-  <h1>Formulario de Feedback</h1>
-</header>
+  <header class="site-header">
+    <div>
+      <img src="logo.jpg" alt="Logo" class="logo">
+    </div> 
+    <div>
+      <span class="company-name">Centro de estudios Ampere</span>
+    </div>
+  </header>  
 
 <main>
+  <h1>Formulario de Feedback</h1>
   <h2>Deja tu opinión sobre el profesor</h2>
   <form id="feedbackForm">
     <label>Fecha:
@@ -20,11 +25,19 @@
     </label>
 
     <label>Curso:
-      <input type="text" name="curso" placeholder="Ej: Mecánica de Materiales" required>
+      <select  name="curso" required>
+        <option value="" disabled selected>-- Selecciona tu curso --</option>
+        <option value="FCQ">FCQ</option>
+        <option value="FACEN">FACEN</option>
+        <option value="FPUNA">FPUNA</option>
+        <option value="FIUNA">FIUNA</option>
+        <option value="Colegio">Colegio</option>
+      </select>
     </label>
 
     <label>Profesor:
       <select name="profe" required>
+        <option value="" disabled selected>-- Selecciona al Profesor --</option>
         <option value="Willian">Willian</option>
         <option value="Osvaldo">Osvaldo</option>
       </select>
@@ -34,14 +47,23 @@
       <textarea name="opinion" rows="4" placeholder="Escribe tu opinión aquí..." required></textarea>
     </label>
 
+
     <button type="submit">Enviar Feedback</button>
   </form>
 
   <p id="msg"></p>
 </main>
 
-<footer>
-  <p>&copy; 2025 Willian - Todos los derechos reservados</p>
+<footer class="site-footer">
+  <div class="footer-top">
+      <small>© 2025 CEA. Todos los derechos reservados.</small>
+
+  </div>
+  <div class="footer-credit">
+      <span>Desarrollado por </span>
+      <img src="LogoWNFB.png" class="footer-logo">
+      
+  </div>
 </footer>
 
 <script src="script.js"></script>
