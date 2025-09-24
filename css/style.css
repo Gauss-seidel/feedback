@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #1a1a1a; /* fondo oscuro */
+  color: #fff;          /* texto blanco */
+}
+
+header, footer {
+  background-color: #1a1a1a; /* mismo fondo que body */
+  color: #cc3300;             /* rojo acento */
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 3px solid #990000; /* borde superior en rojo oscuro */
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #2a2a2a;        /* fondo de tarjeta */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(204, 51, 0, 0.3); /* sombra roja suave */
+}
+
+h2 {
+  text-align: center;
+  color: #cc3300; /* rojo acento */
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #444; /* borde gris oscuro para contraste */
+  box-sizing: border-box;
+  background-color: #1a1a1a; /* fondo inputs oscuro */
+  color: #fff;               /* texto blanco */
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa; /* placeholder gris claro */
+}
+
+button {
+  background-color: #cc3300; /* rojo acento */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #990000; /* rojo oscuro */
+  transform: scale(1.03);
+}
+
+#msg {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #ff704d; /* color naranja para mensajes */
+}

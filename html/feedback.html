@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback de Profesores</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+  <h1>Formulario de Feedback</h1>
+</header>
+
+<main>
+  <h2>Deja tu opinión sobre el profesor</h2>
+  <form id="feedbackForm">
+    <label>Fecha:
+      <input type="date" name="fecha" required>
+    </label>
+
+    <label>Curso:
+      <input type="text" name="curso" placeholder="Ej: Mecánica de Materiales" required>
+    </label>
+
+    <label>Profesor:
+      <select name="profe" required>
+        <option value="Willian">Willian</option>
+        <option value="Osvaldo">Osvaldo</option>
+      </select>
+    </label>
+
+    <label>Opinión:
+      <textarea name="opinion" rows="4" placeholder="Escribe tu opinión aquí..." required></textarea>
+    </label>
+
+    <button type="submit">Enviar Feedback</button>
+  </form>
+
+  <p id="msg"></p>
+</main>
+
+<footer>
+  <p>&copy; 2025 Willian - Todos los derechos reservados</p>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
