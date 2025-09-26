@@ -30,3 +30,17 @@ document.getElementById("feedbackForm").addEventListener("submit", e => {
     console.error(err);
   });
 });
+
+// ------------------------
+// MODO OSCURO
+// ------------------------
+const toggle = document.getElementById("toggle");
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("oscuro");
+
+  if (document.body.classList.contains("oscuro")) {
+    toggle.innerText = "☀️";
+  } else {
+    toggle.innerText = "🌙";
+  }
+});

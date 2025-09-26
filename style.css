@@ -1,223 +1,229 @@
+@font-face {
+  font-family: 'Ethnocentric';
+  src: url('Ethnocentric.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ==========================
-   FUENTE PERSONALIZADA
+   BODY Y ESTILO GENERAL
    ========================== */
-   @font-face {
-    font-family: 'Ethnocentric';                 /* Nombre de la fuente */
-    src: url('Ethnocentric.otf') format('opentype'); /* Archivo de fuente */
-    font-weight: normal;                          /* Peso normal */
-    font-style: normal;                           /* Estilo normal */
-  }
-  
-  /* ==========================
-     BODY Y ESTILO GENERAL
-     ========================== */
-  body {
-    font-family: Arial, sans-serif;  /* Fuente por defecto */
-    margin: 0;                        /* Sin margen */
-    padding: 0;                       /* Sin padding */
-    background: #292525;              /* Fondo oscuro */
-    color: #cc3300;                       /* Texto blanco */
-    line-height: 1.6;                  /* Espaciado de línea */
-  }
-  
-  /* ==========================
-     HEADER
-     ========================== */
-  .site-header {
-    display: flex;                     /* Activa flexbox */
-    justify-content: space-between;    /* Logo izquierda, texto derecha */
-    align-items: center;               /* Centra verticalmente */
-    flex-direction: row;      /* fila horizontal por defecto */
-    flex-wrap: nowrap;
-    padding: 1rem 2rem;                /* Espaciado interno */
-    background-color: #1a1a1a;        /* Fondo oscuro */
-    color: #fff;                       /* Texto blanco */
-    border-bottom: 3px solid #cc3300;  /* Separador rojo debajo */
-  }
-  
-  .logo {
-    height: 50px;                      /* Tamaño del logo */
-    width: auto;
-    text-align: left;                        /* Mantiene proporción */
-  }
-  
-  .company-name {
-    font-family: 'Ethnocentric', sans-serif; /* Fuente personalizada */
-    font-size: 1rem;                  /* Tamaño del texto */
-    text-align: right;
-    color: #cc3300;                    /* Rojo predominante */
-  }
-  
-  .company-name span {
-    color: #cc3300;                    /* Rojo también para los spans */
-  }
-  
-  /* ==========================
-     MAIN
-     ========================== */
-  main {
-    max-width: 600px;                  /* Ancho máximo */
-    margin: 2rem auto;                  /* Centrado horizontal y margen superior */
-    background: #2a2a2a;               /* Fondo de sección */
-    padding: 2rem;                      /* Espaciado interno */
-    border-radius: 8px;                 /* Bordes redondeados */
-    box-shadow: 0 0 10px rgba(204, 51, 0, 0.3); /* Sombra roja suave */
-  }
-  
-  /* ==========================
-     TITULOS
-     ========================== */
-  h1 {
-    font-family: 'Ethnocentric', sans-serif;  /* Fuente personalizada */
-    text-align: center;                       /* Centrado */
-    font-size: 1.7rem;
-    color: #cc3300;                           /* Rojo predominante */
-  }
-  
-  h2 {
-    text-align: center;                       /* Centrado */
-    color: #cc3300;                           /* Rojo predominante */
-  }
-  
-  /* ==========================
-     FORMULARIO
-     ========================== */
-  label {
-    display: block;                           /* Cada label ocupa línea completa */
-    margin-top: 1rem;                         /* Separación superior */
-  }
-  
-  input, select, textarea, button {
-    width: 100%;                              /* Ocupa todo el ancho */
-    padding: 0.5rem;                          /* Espaciado interno */
-    margin-top: 0.5rem;                       /* Separación superior */
-    border-radius: 4px;                        /* Bordes redondeados */
-    border: 1px solid #444;                   /* Borde gris oscuro */
-    box-sizing: border-box;                   /* Incluye padding en ancho */
-    background-color: #1a1a1a;               /* Fondo oscuro */
-    color: #fff;                               /* Texto blanco */
-  }
-  
-  input::placeholder,
-  textarea::placeholder {
-    color: #aaa;                               /* Color gris para placeholder */
-  }
-  
-  button {
-    background-color: #cc3300;                /* Rojo predominante */
-    color: #fff;                               /* Texto blanco */
-    border: none;                              /* Sin borde */
-    cursor: pointer;                           /* Cursor puntero */
-    margin-top: 1.5rem;                        /* Separación superior */
-    font-weight: bold;                         /* Negrita */
-    transition: all 0.3s ease;                 /* Transición suave */
-  }
-  
-  button:hover {
-    background-color: #990000;                /* Rojo más oscuro al pasar mouse */
-    transform: scale(1.03);                   /* Leve zoom */
-  }
-  
-  /* ==========================
-     MENSAJES
-     ========================== */
-  #msg {
-    text-align: center;                        /* Centrado */
-    margin-top: 1rem;                          /* Separación superior */
-    font-weight: bold;                          /* Negrita */
-    color: #cc3300;                             /* Mensajes también en rojo */
-  }
-  
-  /* ==========================
-     RESPONSIVE (MÓVILES)
-     ========================== */
-  @media (max-width: 768px) {
-    @media (max-width: 768px) {
-      .site-header {
-          padding: 0.5rem 1rem;          /* Menos padding en móviles */
-      }
-  
-      .logo {
-          height: 40px;                  /* Logo más pequeño en móviles */
-      }
-  
-      .company-name {
-          font-size: 0.9rem;             /* Texto más pequeño en móviles */
-      }
-  }
-  
-    main {
-      width: 90%;                              /* Ajusta ancho para pantallas pequeñas */
-      padding: 1.5rem;                         /* Menos padding */
-    }
-  
-    h1, h2 {
-      font-size: 1.5rem;                        /* Texto más pequeño */
-    }
-  }
-  
-  /* ==========================
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #696868;  /* Claro por defecto */
+  color: #4c2f2f;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+.derecha {
+  margin-left: auto;  /* empuja el div hacia la derecha */
+  align-items: center;
+}
+
+/* ==========================
+   HEADER
+   ========================== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 1rem 2rem;
+  background-color: #f2f2f2;  /* Claro */
+  color: #1a1a1a;
+  border-bottom: 3px solid #cc3300;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  text-align: left;
+}
+
+.company-name {
+  font-family: 'Ethnocentric', sans-serif;
+  font-size: 1rem;
+  text-align: right;
+  color: #cc3300;
+}
+
+/* ==========================
+   MAIN
+   ========================== */
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #f2f2f2;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(204, 51, 0, 0.2);
+}
+
+/* ==========================
+   TITULOS
+   ========================== */
+h1 {
+  font-family: 'Ethnocentric', sans-serif;
+  text-align: center;
+  font-size: 1.7rem;
+  color: #cc3300;
+}
+
+h2 {
+  text-align: center;
+  color: #cc3300;
+}
+
+/* ==========================
+   FORMULARIO
+   ========================== */
+label {
+  display: block;
+  margin-top: 1rem;
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #1a1a1a;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #555;
+}
+
+button {
+  background-color: #cc3300;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffffff;
+  transform: scale(1.03);
+  color: #cc3300;
+  border: 2px outset #cc3300;
+}
+
+/* ==========================
+   MENSAJES
+   ========================== */
+#msg {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #cc3300;
+}
+
+/* ==========================
    FOOTER
    ========================== */
-   .site-footer {
-    background-color: #1a1a1a;
-    color: #cc3300;
-    padding: 0.8rem 1.6rem;
-    text-align: center;
-    border-top: 3px solid #cc3300;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+.site-footer {
+  background-color: #1a1a1a;
+  color: #cc3300;
+  padding: 0.8rem 1.6rem;
+  text-align: center;
+  border-top: 3px solid #cc3300;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .footer-top {
-    display: flex;
-    flex-direction: column;
-    gap: 0.rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
 .footer-credit {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;       /* Espacio entre logo y texto */
-    margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .footer-logo {
-    height: 25px;       /* Ajusta según tu preferencia */
-    width: auto;
+  height: 25px;
+  width: auto;
 }
 
 .footer-credit span {
-    font-size: 0.8rem;
-    color: #cc3300;
+  font-size: 0.8rem;
 }
 
-/* Links dentro del footer */
-.site-footer a {
-    color: #cc3300;
-    text-decoration: none;
-    transition: color 0.3s ease;
+/* ==========================
+   BOTÓN DE MODO OSCURO
+   ========================== */
+#toggle {
+  margin-left: 15px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #cc3300;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.site-footer a:hover {
-    color: #b30000;
+#toggle:hover {
+  background: #990000;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .site-footer {
-        padding: 0.8rem 1.5rem;
-    }
-
-    .footer-logo {
-        height: 20px;   /* Más pequeño en móviles */
-    }
-
-    .footer-credit span {
-        font-size: 0.7rem;
-    }
+/* ==========================
+   MODO OSCURO
+   ========================== */
+body.oscuro {
+  background: #1e1d1d;
+  color: #cc3300;
 }
 
+body.oscuro main {
+  background: #2a2a2a;
+  color: #cc3300;
+}
+
+body.oscuro .site-header {
+  background-color: #1a1a1a;
+  border-bottom: 3px solid #cc3300;
+  color: #fff;
+}
+
+body.oscuro input,
+body.oscuro select,
+body.oscuro textarea {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.oscuro button {
+  background-color: #cc3300;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+body.oscuro button:hover {
+  background-color: #ffffff;
+  transform: scale(1.03);
+  color: #cc3300;
+  border: 2px outset #cc3300;
+}

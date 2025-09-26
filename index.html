@@ -13,75 +13,78 @@
       <img src="logo.jpg" alt="Logo" class="logo">
     </div> 
     <div>
-      <span class="company-name">Centro de estudios Ampere</span>
+      <span style="text-align: center;" class="company-name">Centro de estudios Ampere</span>
+    </div>
+    <!-- Botón modo oscuro/claro -->
+    <div class="derecha">
+      <button  id="toggle">🌙</button>
     </div>
   </header>  
 
-<main>
-  <h1>Formulario de Feedback</h1>
-  <h2>Deja tu opinión sobre el profesor</h2>
-  <form id="feedbackForm">
-    <label>Fecha:
-      <input type="date" name="fecha" required>
-    </label>
+  <main>
+    <h1>Formulario de Feedback</h1>
+    <h2>Deja tu opinión sobre el profesor</h2>
+    <form id="feedbackForm">
+      <label>Fecha:
+        <input type="date" name="fecha" required>
+      </label>
 
-    <label>Curso:
-      <select  name="curso" required>
-        <option value="" disabled selected>-- Selecciona tu curso --</option>
-        <option value="FCQ">FCQ</option>
-        <option value="FACEN">FACEN</option>
-        <option value="FPUNA">FPUNA</option>
-        <option value="FIUNA">FIUNA</option>
-        <option value="Colegio">Colegio</option>
-      </select>
-    </label>
+      <label>Curso:
+        <select name="curso" required>
+          <option value="" disabled selected>-- Selecciona tu curso --</option>
+          <option value="FCQ">FCQ</option>
+          <option value="FACEN">FACEN</option>
+          <option value="FPUNA">FPUNA</option>
+          <option value="FIUNA">FIUNA</option>
+          <option value="Colegio">Colegio</option>
+        </select>
+      </label>
 
-    <label>Profesor:
-      <select name="profe" required>
-        <option value="" disabled selected>-- Selecciona al Profesor --</option>
-        <option value="General">Opinión General</option>
-        <option value="Willian">Prof. Willian Núñez</option>
-        <option value="Celeste">Prof. Celeste Nocce</option>
-        <option value="Amanda">Prof. Amanda Lasta</option>
-        <option value="Osvaldo">Prof. Osvaldo Rolón</option>
-        <option value="David">Prof. David Giménez</option>
-        <option value="Bruno">Prof. Bruno Rojas</option>
-        <option value="Matias">Prof. Matías Irala</option>
-        <option value="Victoria">Prof. Victoria Mendieta</option>
-        <option value="Pedro">Prof. Pedro Bogarín</option>
-        <option value="Hector">Prof. Héctor González</option>
-        <option value="Magali">Prof. Magalí Palacio</option>
-        <option value="Joshua">Prof. Joshua Dagguerre</option>
-        <option value="Alejandro">Prof. Alejandro Dagguerre</option>
-        <option value="Anibal">Prof. Aníbal González</option>
-        <option value="Oscar">Prof. Óscar Verza</option>
-        <option value="Lucas">Prof. Lucas Chamorro</option>
-      </select>      
-    </label>
+      <label>Profesor:
+        <select name="profe" required>
+          <option value="" disabled selected>-- Selecciona al Profesor --</option>
+          <option value="General">Opinión General</option>
+          <option value="Willian">Prof. Willian Núñez</option>
+          <option value="Celeste">Prof. Celeste Nocce</option>
+          <option value="Amanda">Prof. Amanda Lasta</option>
+          <option value="Osvaldo">Prof. Osvaldo Rolón</option>
+          <option value="David">Prof. David Giménez</option>
+          <option value="Bruno">Prof. Bruno Rojas</option>
+          <option value="Matias">Prof. Matías Irala</option>
+          <option value="Victoria">Prof. Victoria Mendieta</option>
+          <option value="Pedro">Prof. Pedro Bogarín</option>
+          <option value="Hector">Prof. Héctor González</option>
+          <option value="Magali">Prof. Magalí Palacio</option>
+          <option value="Joshua">Prof. Joshua Daguerre</option>
+          <option value="Alejandro">Prof. Alejandro Daguerre</option>
+          <option value="Anibal">Prof. Aníbal González</option>
+          <option value="Oscar">Prof. Óscar Verza</option>
+          <option value="Juanjo">Prof. Juan José Riverón</option>
+          <option value="Larissa">Prof. Larissa Ruíz</option>
+          <option value="Lucas">Prof. Lucas Chamorro</option>
+        </select>      
+      </label>
 
-    <label>Opinión:
-      <textarea name="opinion" rows="4" placeholder="Escribe tu opinión aquí..." required></textarea>
-    </label>
+      <label>Opinión:
+        <textarea name="opinion" rows="4" placeholder="Escribe tu opinión aquí..." required></textarea>
+      </label>
 
+      <button type="submit">Enviar Feedback</button>
+    </form>
 
-    <button type="submit">Enviar Feedback</button>
-  </form>
+    <p id="msg"></p>
+  </main>
 
-  <p id="msg"></p>
-</main>
+  <footer class="site-footer">
+    <div class="footer-top">
+        <small>© 2025 CEA. Todos los derechos reservados.</small>
+    </div>
+    <div class="footer-credit">
+        <span>Desarrollado por </span>
+        <img src="LogoWNFB.png" class="footer-logo">
+    </div>
+  </footer>
 
-<footer class="site-footer">
-  <div class="footer-top">
-      <small>© 2025 CEA. Todos los derechos reservados.</small>
-
-  </div>
-  <div class="footer-credit">
-      <span>Desarrollado por </span>
-      <img src="LogoWNFB.png" class="footer-logo">
-      
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
