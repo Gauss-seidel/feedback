@@ -3,90 +3,229 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback de Profesores</title>
+  <title>Feedback — Centro de Estudios Ampere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/jpg" href="logo.jpg">
 </head>
 <body>
-  <header class="site-header">
-    <div>
-      <img src="logo.jpg" alt="Logo" class="logo">
-    </div> 
-    <div>
-      <span style="text-align: center;" class="company-name">Centro de estudios Ampere</span>
-    </div>
-    <!-- Botón modo oscuro/claro -->
-    <div class="derecha">
-      <button  id="toggle">🌙</button>
-    </div>
-  </header>  
 
-  <main>
-    <h1>Formulario de Feedback</h1>
-    <h2>Deja tu opinión sobre el profesor</h2>
-    <form id="feedbackForm">
-      <label>Fecha:
-        <input type="date" name="fecha" required>
-      </label>
+  <!-- ===== SPLIT LAYOUT ===== -->
+  <div class="split">
 
-      <label>Curso:
-        <select name="curso" required>
-          <option value="" disabled selected>-- Selecciona tu curso --</option>
-          <option value="FCQ">FCQ</option>
-          <option value="FACEN">FACEN</option>
-          <option value="FPUNA">FPUNA</option>
-          <option value="FIUNA">FIUNA</option>
-          <option value="Colegio">Colegio</option>
-        </select>
-      </label>
+    <!-- ===== LEFT PANEL — Mensaje ===== -->
+    <aside class="panel-left">
+      <div class="panel-left-inner">
 
-      <label>Profesor:
-        <select name="profe" required>
-          <option value="" disabled selected>-- Selecciona al Profesor --</option>
-          <option value="Alejandro">Prof. Alejandro Gauto</option>
-          <option value="Amanda">Prof. Amanda Lasta</option>
-          <option value="Anibal">Prof. Aníbal González</option>
-          <option value="Abril">Prof. Abril Daguerre</option>
-          <option value="Bruno">Prof. Bruno Rojas</option>
-          <option value="Celeste">Prof. Celeste Nocce</option>
-          <option value="David">Prof. David Giménez</option>
-          <option value="General">Opinión General</option>
-          <option value="Hector">Prof. Héctor González</option>
-          <option value="Juanjo">Prof. Juan José Riverón</option>
-          <option value="Joshua">Prof. Joshua Daguerre</option>
-          <option value="Larissa">Prof. Larissa Ruíz</option>
-          <option value="Lucas">Prof. Lucas Chamorro</option>
-          <option value="Magali">Prof. Magalí Palacio</option>
-          <option value="Matias">Prof. Matías Irala</option>
-          <option value="Osvaldo">Prof. Osvaldo Rolón</option>
-          <option value="Verza">Prof. Óscar Verza</option>
-          <option value="Pedro">Prof. Pedro Bogarín</option>
-          <option value="Regina">Prof. Regina Daneiz</option>
-          <option value="Valeria">Prof. Valeria Medina</option>
-          <option value="Victoria">Prof. Victoria Mendieta</option>
-          <option value="Willian">Prof. Willian Núñez</option>
-        </select>      
-      </label>
+        <!-- Theme toggle (visible solo en mobile) -->
+        <button class="theme-toggle-mobile" id="themeToggleMobile" aria-label="Cambiar modo">
+          <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
 
-      <label>Opinión:
-        <textarea name="opinion" rows="4" placeholder="Escribe tu opinión aquí..." required></textarea>
-      </label>
+        <div class="panel-brand">
+          <img src="logo.jpg" alt="CEA" class="panel-logo-img" onerror="this.style.display='none'">
+          <div class="panel-brand-name">CENTRO DE ESTUDIOS AMPERE</div>
+        </div>
 
-      <button type="submit">Enviar Feedback</button>
-    </form>
+        <h1 class="panel-title">
+          Tu opinión
+          <span>nos hace mejores</span>
+        </h1>
 
-    <p id="msg"></p>
-  </main>
+        <p class="panel-desc">
+          Cada feedback que nos dejás es una oportunidad para crecer. 
+          Tomate un minuto y ayudanos a mejorar la experiencia de todos.
+        </p>
 
-  <footer class="site-footer">
-    <div class="footer-top">
-        <small>© 2025 CEA. Todos los derechos reservados.</small>
-    </div>
-    <div class="footer-credit">
-        <span>Desarrollado por </span>
-        <img src="LogoWNFB.png" class="footer-logo">
-    </div>
-  </footer>
+        <div class="panel-quote">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" opacity="0.3"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>
+          <blockquote>
+            La calidad no es un acto, es un hábito. Tus palabras son el espejo que nos ayuda a vernos.
+          </blockquote>
+          <cite>— Equipo CEA</cite>
+        </div>
+
+        <div class="panel-footer">
+          <span class="panel-footer-dot"></span>
+          <span class="panel-footer-text">Tu voz construye</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===== RIGHT PANEL — Formulario ===== -->
+    <main class="panel-right">
+      <div class="form-card">
+        <!-- Theme toggle (desktop) -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar modo oscuro/claro">
+          <span class="theme-toggle-track">
+            <span class="theme-toggle-thumb"></span>
+          </span>
+          <span class="theme-toggle-label">Modo oscuro</span>
+        </button>
+
+        <div class="form-header">
+          <h2 class="form-title">Compartí tu experiencia</h2>
+          <p class="form-sub">Todos los campos son obligatorios</p>
+        </div>
+
+        <!-- Fecha + Curso -->
+        <div class="form-row">
+          <div class="form-group">
+            <label class="field-label" for="fecha">📅 Fecha</label>
+            <div class="field-input-wrapper">
+              <input type="date" name="fecha" id="fecha" required class="field-input">
+              <span class="input-ring"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="field-label" for="curso">📚 Curso</label>
+            <div class="field-input-wrapper">
+              <select name="curso" id="curso" required class="field-input">
+                <option value="" disabled selected>Seleccioná</option>
+                <option value="FCQ">FCQ</option>
+                <option value="FACEN">FACEN</option>
+                <option value="FPUNA">FPUNA</option>
+                <option value="FIUNA">FIUNA</option>
+                <option value="Colegio">Colegio</option>
+              </select>
+              <svg class="select-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              <span class="input-ring"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profesor -->
+        <div class="form-group">
+          <label class="field-label" for="profe">👨‍🏫 Profesor</label>
+          <div class="field-input-wrapper">
+            <select name="profe" id="profe" required class="field-input">
+              <option value="" disabled selected>Seleccioná al profesor</option>
+              <option value="Alejandro">Prof. Alejandro Gauto</option>
+              <option value="Amanda">Prof. Amanda Lasta</option>
+              <option value="Anibal">Prof. Aníbal González</option>
+              <option value="Abril">Prof. Abril Daguerre</option>
+              <option value="Bruno">Prof. Bruno Rojas</option>
+              <option value="Celeste">Prof. Celeste Nocce</option>
+              <option value="David">Prof. David Giménez</option>
+              <option value="General">Opinión General</option>
+              <option value="Hector">Prof. Héctor González</option>
+              <option value="Juanjo">Prof. Juan José Riverón</option>
+              <option value="Joshua">Prof. Joshua Daguerre</option>
+              <option value="Larissa">Prof. Larissa Ruíz</option>
+              <option value="Lucas">Prof. Lucas Chamorro</option>
+              <option value="Magali">Prof. Magalí Palacio</option>
+              <option value="Matias">Prof. Matías Irala</option>
+              <option value="Osvaldo">Prof. Osvaldo Rolón</option>
+              <option value="Verza">Prof. Óscar Verza</option>
+              <option value="Pedro">Prof. Pedro Bogarín</option>
+              <option value="Regina">Prof. Regina Daneiz</option>
+              <option value="Valeria">Prof. Valeria Medina</option>
+              <option value="Victoria">Prof. Victoria Mendieta</option>
+              <option value="Willian">Prof. Willian Núñez</option>
+            </select>
+            <svg class="select-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            <span class="input-ring"></span>
+          </div>
+        </div>
+
+        <!-- Rating -->
+        <div class="rating-group">
+          <span class="field-label">⭐ Calificación</span>
+          <div class="rating-options" role="radiogroup" aria-label="Calificación">
+            <input type="radio" name="rating" id="r1" value="1" class="rating-input">
+            <label for="r1" class="rating-btn" data-rating="1">
+              <svg class="rating-emoji" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <g class="face-group">
+                  <circle cx="16" cy="16" r="12"/>
+                  <circle cx="11" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+                  <circle cx="21" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+                  <path d="M11 24 Q16 20.5, 21 24"/>
+                </g>
+                <path class="tear" d="M12 16 Q11 18.5, 12 20 Q13 18.5, 12 16" fill="currentColor" stroke="none"/>
+              </svg>
+              <span class="rating-text">Mala</span>
+            </label>
+            <input type="radio" name="rating" id="r2" value="2" class="rating-input">
+            <label for="r2" class="rating-btn" data-rating="2">
+              <svg class="rating-emoji" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="16" cy="16" r="12"/>
+                <circle cx="11" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+                <circle cx="21" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+                <line x1="11" y1="23" x2="21" y2="23"/>
+              </svg>
+              <span class="rating-text">Regular</span>
+            </label>
+            <input type="radio" name="rating" id="r3" value="3" class="rating-input">
+            <label for="r3" class="rating-btn" data-rating="3">
+              <svg class="rating-emoji" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="16" cy="16" r="12"/>
+                <circle cx="11" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+                <circle cx="21" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+                <path d="M11 22 Q16 26.5, 21 22"/>
+              </svg>
+              <span class="rating-text">Buena</span>
+            </label>
+            <input type="radio" name="rating" id="r4" value="4" class="rating-input">
+            <label for="r4" class="rating-btn" data-rating="4">
+              <svg class="rating-emoji" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="16" cy="16" r="12"/>
+                <path d="M9 14 Q11 12, 13 14" fill="currentColor" stroke="none"/>
+                <path d="M19 14 Q21 12, 23 14" fill="currentColor" stroke="none"/>
+                <path d="M11 22 Q16 28, 21 22"/>
+                <circle class="blush" cx="9" cy="20" r="3" fill="currentColor" stroke="none"/>
+                <circle class="blush" cx="23" cy="20" r="3" fill="currentColor" stroke="none"/>
+              </svg>
+              <span class="rating-text">Muy buena</span>
+            </label>
+            <input type="radio" name="rating" id="r5" value="5" class="rating-input">
+            <label for="r5" class="rating-btn" data-rating="5">
+              <svg class="rating-emoji" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 3 L19.5 12 L29 12 L21 18 L23.5 27 L16 22 L8.5 27 L11 18 L3 12 L12.5 12 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+                <circle class="sparkle" cx="22" cy="8" r="1.2" fill="currentColor" stroke="none"/>
+                <circle class="sparkle" cx="27" cy="20" r="1" fill="currentColor" stroke="none"/>
+                <circle class="sparkle" cx="9" cy="26" r="0.9" fill="currentColor" stroke="none"/>
+                <circle class="sparkle" cx="6" cy="12" r="0.8" fill="currentColor" stroke="none"/>
+              </svg>
+              <span class="rating-text">Excelente</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Opinión -->
+        <div class="form-group">
+          <label class="field-label" for="opinion">✍️ Tu opinión</label>
+          <div class="field-input-wrapper">
+            <textarea name="opinion" id="opinion" rows="4" required class="field-input field-textarea" placeholder="¿Qué destacarías de la experiencia?"></textarea>
+            <span class="input-ring"></span>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="submit-btn-text">Enviar feedback</span>
+          <span class="submit-btn-icon" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </span>
+        </button>
+
+        <div id="msg" class="msg" role="status" aria-live="polite"></div>
+      </div>
+    </main>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
